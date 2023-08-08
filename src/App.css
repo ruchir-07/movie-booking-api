@@ -1,0 +1,241 @@
+/* ========== Navbar CSS =========== */
+.navbar {
+    width: 100%;
+    height: 10vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #1d1dff;
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* ================ Home CSS ================== */
+.movie-list {
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 80px 0;
+}
+
+.movie-card {
+    width: 330px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin: 20px 10px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: all .3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+    transition: all .3s ease;
+}
+
+.movie-banner {
+    display: flex;
+    justify-content: center;
+}
+
+.movie-banner img {
+    width: 300px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.movie-title {
+    text-align: center;
+    margin: 8px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.details-btn {
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+
+button {
+    padding: 7px 16px;
+    outline: none;
+    border: none;
+    background: #1d1dff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .4s ease;
+}
+
+button:hover {
+    transform: scale(1);
+    transition: all .4s ease;
+}
+
+/* ============= Movie Details CSS ================ */
+.detail-section {
+    display: flex;
+    justify-content: center;
+}
+
+.movie-details {
+    margin: 100px 50px;
+    width: 900px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+}
+
+.movie-detail-img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.movie-detail-img img {
+    width: 300px;
+    margin-right: 25px;
+    border-radius: 12px 0 0 12px;
+}
+
+.movie-detail-title span,
+.movie-detail-summary span,
+.movie-detail-language span,
+.movie-detail-premiered span,
+.movie-detail-rating span {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.book-ticket-btn {
+    margin-top: 14px;
+    text-align: center;
+}
+
+a {
+    color: #1d1dff;
+    font-size: 20px;
+}
+
+/* ============= Ticket Booking CSS ============ */
+.book-ticket-section {
+    width: 100%;
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.book-ticket {
+    width: 340px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 20px 15px;
+    border-radius: 12px;
+}
+
+.book-ticket h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.movie-image {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.movie-image img {
+    width: 120px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.book-ticket form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+input {
+    padding: 5px 10px;
+    border: 2px solid #1d1dff;
+    border-radius: 6px;
+    outline: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.book {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.book button {
+    width: 150px;
+}
+
+
+/* ============= Responsive for all devices ============= */
+@media (max-width: 1050px) {
+    .movie-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 724px) {
+    .movie-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .movie-card {
+        width: 300px;
+    }
+
+    .movie-banner img {
+        width: 270px;
+    }
+}
+
+@media (max-width: 780px) {
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-detail-img img {
+        width: 260px;
+        border-radius: 12px 12px 0 0;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .movie-detail-title span,
+    .movie-detail-summary span,
+    .movie-detail-language span,
+    .movie-detail-premiered span,
+    .movie-detail-rating span {
+        font-size: 20px;
+    }
+}
